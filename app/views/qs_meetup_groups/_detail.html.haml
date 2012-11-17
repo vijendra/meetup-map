@@ -1,0 +1,6 @@
+.group-name= link_to group.name, group
+.members= pluralize group.members, 'member'
+.links
+  = link_to 'Details', group
+  \|
+  = link_to 'Meetup', "http://meetup.com/#{group.url}"
