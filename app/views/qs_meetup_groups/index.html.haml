@@ -1,0 +1,14 @@
+%h4 Quantified self meetup map
+= gmaps({ map_options: {center_longitude: 180, zoom: 0, auto_adjust: true}, markers: {data: @markers} })                
+
+%br
+%h4 Quantified self meetup groups                                                                
+%table.table.table-striped.table-bordered
+  %tbody
+    %tr
+      %th Group link
+    - @quantifiers.each do |quantifier|
+      %tr
+        %td
+          = link_to quantifier.place, quantifier
+%br
