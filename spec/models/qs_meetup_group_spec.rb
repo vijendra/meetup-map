@@ -23,12 +23,6 @@ describe QsMeetupGroup do
     end
   end
   
-  describe "#gmaps4rails_infowindow" do
-    it "should return name" do
-       qs_group.gmaps4rails_infowindow.should == qs_group.name
-    end
-  end
-  
   describe "#update_meetup_details" do
     before(:each) do
       @api = MeetupApi.new
