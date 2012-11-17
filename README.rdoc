@@ -1,1 +1,3 @@
 QS Meetup Groups(http://quantifiedself.com/)
+
+http://meetup-map.herokuapp.com/
