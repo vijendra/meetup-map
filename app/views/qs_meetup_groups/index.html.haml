@@ -6,9 +6,14 @@
 %table.table.table-striped.table-bordered
   %tbody
     %tr
-      %th Group link
+      %th Group
+      %th Latitude
+      %th Longitude
+      %th Members
     - @quantifiers.each do |quantifier|
       %tr
-        %td
-          = link_to quantifier.place, quantifier
+        %td= link_to quantifier.place, quantifier
+        %td= quantifier.latitude
+        %td= quantifier.longitude
+        %td= quantifier.members
 %br
