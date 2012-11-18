@@ -1,6 +1,3 @@
-%p#notice= notice
-%br/
-%br/
 #group_details
   %h1= @quantifier.name
   .meetup_link= link_to "View on Meetup.com", "http://meetup.com/#{@quantifier.url}"
@@ -9,7 +6,4 @@
   .organizers
     %strong Organized by:
     = @quantifier.orgianizer
-  = gmaps({                                                                     |
-    "map_options" => {"type" => "ROADMAP", "auto_zoom" => false, :zoom => 12} , |
-    "markers"     => { "data" => @quantifier.to_gmaps4rails }                   |
-    })                                                                          |
+  = gmaps({ map_options: {type: "ROADMAP", auto_zoom: false, zoom: 12}, markers: { data: @quantifier.to_gmaps4rails}  })                            
