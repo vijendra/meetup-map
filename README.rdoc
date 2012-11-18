@@ -1,4 +1,4 @@
-Meetup Mapper
+= Meetup Mapper
 ------------------------------------------------------------------
 
 This is a Ruby on Rails application that makes it easy to visualize
@@ -8,11 +8,11 @@ visualizing the meetup groups associated with Quantifed Self
 quickly find the meetup gruop close to them, and eventually to browse
 upcoming events and past resources.
 
-Demo: http://meetup-map.herokuapp.com/
+Demo: http://meetup-map.herokuapp.com
 
 To initialize the group information:
-- QuantifiedSelfScraper.new.save_groups
-- QsMeetupGroup.all.each { |g| g.update_meetup_details }
+- rake data:scrape_meetup_groups
+- rake data:update_groups_with_api_data
 
 ----------------------------------------------------------------
 Released under the MIT Licence 
