@@ -11,11 +11,7 @@ class QsMeetupGroup < ActiveRecord::Base
   def gmaps4rails_address
     "#{self.latitude}, #{self.longitude}"
   end
-  
-  def gmaps4rails_infowindow
-    self.name
-  end
-    
+
   def update_meetup_details
     #if self.name.blank?
     group = MeetupApi.new.fetch('groups', {group_urlname: self.url}).first
