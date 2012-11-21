@@ -1,4 +1,5 @@
 = Meetup Mapper
+{<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/vijendra/meetup-map]
 ------------------------------------------------------------------
 
 This is a Ruby on Rails application that makes it easy to visualize
