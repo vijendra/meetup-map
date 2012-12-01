@@ -6,5 +6,5 @@
       %span= "@#{tweet.from_user}"
     .tweeted_on.right
       = tweet.tweeted_on.strftime("%d %b, %Y")
-      = image_tag('twitter.png')   
+      = link_to image_tag('twitter.png'), "http://twitter.com/#{tweet.from_user}/status/#{tweet.tweet_id}", target: '_blank'   
   .text= tweet.body
