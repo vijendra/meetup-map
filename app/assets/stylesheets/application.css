@@ -11,6 +11,10 @@
  *= require_self
  *= require_tree .
  */
+.left{float: left}
+.right{float: right}
+.clear{clear: both}
+
 .content{margin-top: 60px; width: 100%}
 .map_container {
   padding: 6px;

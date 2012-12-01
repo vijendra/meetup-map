@@ -33,8 +33,13 @@ gem 'mechanize'
 gem 'haml-rails'
 gem 'rMeetup'
 gem 'gmaps4rails'
- 
- 
+gem 'twitter'
+gem 'oauth'
+gem 'topsy'
+gem 'tweetstream'
+gem 'ancestry' 
+gem 'kaminari'
+
 group :test, :development do
   gem 'rspec-rails'
   #gem 'minitest-rails'

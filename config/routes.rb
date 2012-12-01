@@ -1,6 +1,7 @@
 MeetupMap::Application.routes.draw do
   resources :qs_meetup_groups 
-
+  resources :tweets
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

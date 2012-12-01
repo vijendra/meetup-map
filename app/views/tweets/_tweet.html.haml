@@ -1,0 +1,10 @@
+.profile= image_tag tweet.profile_image
+.details
+  .clearfix
+    .user.left
+      = tweet.from_user_name
+      %span= "@#{tweet.from_user}"
+    .tweeted_on.right
+      = tweet.tweeted_on.strftime("%d %b, %Y")
+      = image_tag('twitter.png')   
+  .text= tweet.body

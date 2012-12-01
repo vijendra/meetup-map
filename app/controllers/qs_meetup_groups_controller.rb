@@ -1,4 +1,3 @@
-# encoding: utf-8
 class QsMeetupGroupsController < ApplicationController
   def index
     @quantifiers = QsMeetupGroup.order(:place).all

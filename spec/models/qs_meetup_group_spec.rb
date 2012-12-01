@@ -58,6 +58,10 @@ describe QsMeetupGroup do
       qs_group.orgianizer.should == group.organizer_name
     end
     
+    it "should update the record with data returned by meetup api, even if it contains special chars" do
+      
+    end
+    
     it "should not raise errors, if api doesn't return any thing" do
       api_result = RMeetup::Collection.new
       @api.stub!(:fetch).with('groups', {group_urlname: qs_group.url}).and_return(api_result) 
