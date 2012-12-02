@@ -1,12 +1,6 @@
 %h4 Tweets
 - @tweets.each do |tweet|
-  .tweet.clearfix
-    = render 'tweet', {:tweet => tweet}
+  = render 'tweet', {:tweet => tweet}
  
-    
-  - tweet.children.each do |child|
-    .tweet.reply_tweet.clearfix
-      = render 'tweet', {:tweet => child}     
-
 %hr                                              
 = paginate @tweets  

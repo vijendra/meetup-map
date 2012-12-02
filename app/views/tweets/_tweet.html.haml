@@ -1,10 +1,14 @@
-.profile= image_tag tweet.profile_image
-.details
-  .clearfix
-    .user.left
-      = tweet.from_user_name
-      %span= "@#{tweet.from_user}"
-    .tweeted_on.right
-      = tweet.tweeted_on.strftime("%d %b, %Y")
-      = link_to image_tag('twitter.png'), "http://twitter.com/#{tweet.from_user}/status/#{tweet.tweet_id}", target: '_blank'   
-  .text= tweet.body
+%div{class: tweet_class(tweet)}
+  .profile= image_tag tweet.profile_image
+  .details
+    .clearfix
+      .user.left
+        = tweet.from_user_name
+        %span= "@#{tweet.from_user}"
+      .tweeted_on.right
+        = tweet.tweeted_on.strftime("%d %b, %Y")
+        = link_to image_tag('twitter.png'), "http://twitter.com/#{tweet.from_user}/status/#{tweet.tweet_id}", target: '_blank'   
+    .text= tweet.body
+  
+- tweet.children.each do |child|
+  = render 'tweet', {:tweet => child}
