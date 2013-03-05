@@ -2,13 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+#For Rails 3.1, a JavaScript runtime is needed for Linux Ubuntu. It is not needed for Mac OS X or Windows.  
+gem 'execjs'
+gem "therubyracer", :platforms => :ruby
+  
 group :development do
   gem 'mysql2'
-  
-  #For Rails 3.1, a JavaScript runtime is needed for Linux Ubuntu. 
-  #It is not needed for Mac OS X or Windows.  
-  gem 'execjs'
-  gem "therubyracer", :platforms => :ruby
 end
 
 #For running the app in heroku 
